@@ -1,0 +1,27 @@
+{
+  "name": "memory",
+  "version": "0.0.0",
+  "authors": [
+    "Sarrah Vesselov <sarchka1@gmail.com>"
+  ],
+  "description": "A card matching game",
+  "main": "index.html",
+  "keywords": [
+    "memory",
+    "card",
+    "game"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "underscore": "~1.8.2"
+  }
+}
