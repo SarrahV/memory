@@ -2,12 +2,12 @@ var Card = (function(){
 
   function Card(face) {
     this.face = face;
-    this.$el  = $this.generateEl(face);
+    this.$el  = this.generateEl(face);
   }
 
   Card.prototype = {
 
-    generateEl: function() {
+    generateEl: function(face){
       //declaring our variable
       var $el;
 
@@ -23,11 +23,11 @@ var Card = (function(){
       return $el;
     },
 
-    reveal: function() {
+    reveal: function(){
       this.$el.removeClass("back").addClass("front");
     },
 
-    conceal: function() {
+    conceal: function(){
       this.$el.removeClass("front").addClass("back");
     },
 
@@ -44,7 +44,7 @@ var Card = (function(){
     //card2.matches(card3); //true
 
     matches: function(){
-      // checking to make sure they didn't clcik on the same card
+      // checking to make sure they didn't click on the same card
       if (card === this){
         return false;
       }
@@ -52,7 +52,7 @@ var Card = (function(){
       return this.face === card.face;
     },
 
-    render: function() {
+    render: function(){
       return this.$el;
     }
   }
