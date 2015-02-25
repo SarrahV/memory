@@ -14,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concat": "^1.0.0",
     "gulp": "^3.8.11",
-    "gulp-less": "^3.0.1"
+    "gulp-less": "^3.0.1",
+    "main-bower-files": "^2.5.0"
   }
 }
