@@ -3,6 +3,7 @@ var Card = (function(){
   function Card(face) {
     this.face = face;
     this.$el  = this.generateEl(face);
+    this.isMatched = false;
   }
 
   Card.prototype = {
@@ -12,9 +13,9 @@ var Card = (function(){
       var $el;
 
       //creating an empty div in jquery
-      $el = $("<div>");
+      $el = $("<div/>");
       //setting the data to face
-      $el.data("face", face);
+      $el.data("card", this);
       //adding classes card and back
       $el.addClass("card back");
       //setting the text
@@ -33,6 +34,7 @@ var Card = (function(){
 
     matched: function(){
       this.$el.addClass("matched");
+      this.isMatched = true;
     },
     
     //This is what is happening in Matches:
@@ -43,7 +45,7 @@ var Card = (function(){
     //card1.matches(card2); //false
     //card2.matches(card3); //true
 
-    matches: function(){
+    matches: function(card){
       // checking to make sure they didn't click on the same card
       if (card === this){
         return false;
